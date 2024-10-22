@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                *{
+            margin:0px;
+            padding:0px 0px;
+        }
+        .time{background-color: rgb(11, 138, 91);
+            height:25px;
+        width:100%;
+    color:white;
+display: flex;
+align-items: center;}
+        .nav{
+            height:50px;
+            width:100%;
+            background-color:#FD5E53;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .nav a{
+            color:white;
+            text-decoration: none;
+            font-size:20px;
+            padding:10px 10px;
+            
+        }
+        .nav_a{
+            height:50px;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+        }
+        .nav .nav_a:hover{
+            background-color: black;
+        }
+        .nav a:hover{
+            color:#FD5E53
+        }
+        .main_panel{
+            height:650px;
+            width:100%;
+            display: flex;
+            margin-top:10px
+          
+        }
+        .panel{
+            height:100%;
+            width:20%;
+            background-color:rgb(11, 138, 91);
+            display:flex;
+            align-items:center;
+            
+            flex-direction: column;
+
+        }
+        .panel a{
+            color:white;
+            font-size:20px;
+            text-decoration: none;
+            margin-top:10px;
+
+        }
+        iframe{
+            height:100%;
+            width:80%;
+            border:none;
+        }
+        .panel a:hover{
+            color:coral;
+            border-bottom:1px solid rgb(255, 0, 204);
+        }
+        footer{
+        height:300px;
+        width:100%;
+        background-color: #99649A;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+       
+       }
+       footer a,.ad{
+        color:white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top:10px;
+       }
+       .ad{
+        font-weight: 100;
+       }
+       footer a:hover{
+        color:#FD5E53;
+       }
+    </style>
+</head>
+<body>
+    
+    <div class="time">
+        <p id="times">Time here<p>
+    </div>
+    <h1 style="text-align: center;margin-top:10px">KALIADAS PUBLIC SCHOOL</h1>   
+    <div class="nav">
+        <span class="nav_a"><a href="home">Home</a></span>
+        <span class="nav_a"><a href="gallery">Gallery</a></span>
+        <span class="nav_a"><a href="corner">Student Corner</a></span>
+        <span class="nav_a"><a href="suggestions">Suggestions</a></span>
+        <span class="nav_a"><a href="about">About us</a></span>
+        <span class="nav_a"><a href="contact">Contact us</a></span>
+    </div>
+<div class="main_panel">
+<div class="panel">
+    <a href="detail.html" target="frame">Student's details</a>
+   <a href="register.html" target="frame">Registartion form</a>
+</div>
+<iframe name="frame" id="frame" src="option.html">
+
+</iframe>
+</div>
+<footer>
+
+    <a href="home">Home</a>
+    <a href="gallery">Gallery</a>
+    <a href="corner">Studnet's Corner</a>
+    <a href="suggestions">Suggestions</a>
+    <a href="contact">Contact us</a>
+    <a href="about">About us</a>
+    <p class='ad'>Address: Village Harriya,Basti 272155</p>
+    <p class="ad">Phone Number: +91 989745623, 1800 568 569</p>
+    
+</footer>
+</body>
+<script>
+    const time = document.getElementById("times")
+    setInterval(function(){
+        var d = new Date()
+        let times = d.getDate()
+        console.log(d)
+        time.innerText=d
+    },1000)
+</script>
+</html>
